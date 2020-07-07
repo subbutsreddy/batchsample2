@@ -1,0 +1,223 @@
+28-06-2020 02:58:40.028 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@3a7b9ef9]
+28-06-2020 02:58:42.022 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.query - Executing prepared SQL query
+28-06-2020 02:58:42.023 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [SELECT JOB_INSTANCE_ID, JOB_NAME from BATCH_JOB_INSTANCE where JOB_NAME = ? and JOB_KEY = ?]
+28-06-2020 02:58:42.026 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.processCommit - Initiating transaction commit
+28-06-2020 02:58:42.378 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCommit - Committing JPA transaction on EntityManager [SessionImpl(1403636326<open>)]
+28-06-2020 02:58:42.378 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.commit - committing
+28-06-2020 02:58:42.379 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCleanupAfterCompletion - Closing JPA EntityManager [SessionImpl(1403636326<open>)] after transaction
+28-06-2020 02:58:42.379 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.getTransaction - Creating new transaction with name [org.springframework.batch.core.repository.support.SimpleJobRepository.createJobExecution]: PROPAGATION_REQUIRES_NEW,ISOLATION_DEFAULT
+28-06-2020 02:58:42.379 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Opened new EntityManager [SessionImpl(1238168625<open>)] for JPA transaction
+28-06-2020 02:58:42.379 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.<init> - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+28-06-2020 02:58:42.380 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.begin - begin
+28-06-2020 02:58:42.380 [scheduling-1] DEBUG o.s.j.d.DriverManagerDataSource.getConnectionFromDriver - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/finflowz?searchpath=finflowz_workflow]
+28-06-2020 02:58:42.412 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@2fa637a7]
+28-06-2020 02:58:42.412 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.query - Executing prepared SQL query
+28-06-2020 02:58:42.412 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [SELECT JOB_INSTANCE_ID, JOB_NAME from BATCH_JOB_INSTANCE where JOB_NAME = ? and JOB_KEY = ?]
+28-06-2020 02:58:42.414 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.query - Executing prepared SQL query
+28-06-2020 02:58:42.414 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [SELECT JOB_INSTANCE_ID, JOB_NAME from BATCH_JOB_INSTANCE where JOB_NAME = ? and JOB_KEY = ?]
+28-06-2020 02:58:42.416 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.update - Executing prepared SQL update
+28-06-2020 02:58:42.416 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [INSERT into BATCH_JOB_INSTANCE(JOB_INSTANCE_ID, JOB_NAME, JOB_KEY, VERSION) values (?, ?, ?, ?)]
+28-06-2020 02:58:42.417 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.update - Executing prepared SQL update
+28-06-2020 02:58:42.417 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [INSERT into BATCH_JOB_EXECUTION(JOB_EXECUTION_ID, JOB_INSTANCE_ID, START_TIME, END_TIME, STATUS, EXIT_CODE, EXIT_MESSAGE, VERSION, CREATE_TIME, LAST_UPDATED, JOB_CONFIGURATION_LOCATION) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+28-06-2020 02:58:42.418 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.update - Executing prepared SQL update
+28-06-2020 02:58:42.418 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [INSERT into BATCH_JOB_EXECUTION_PARAMS(JOB_EXECUTION_ID, KEY_NAME, TYPE_CD, STRING_VAL, DATE_VAL, LONG_VAL, DOUBLE_VAL, IDENTIFYING) values (?, ?, ?, ?, ?, ?, ?, ?)]
+28-06-2020 02:58:42.419 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.update - Executing prepared SQL update
+28-06-2020 02:58:42.419 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [INSERT INTO BATCH_JOB_EXECUTION_CONTEXT (SHORT_CONTEXT, SERIALIZED_CONTEXT, JOB_EXECUTION_ID) VALUES(?, ?, ?)]
+28-06-2020 02:58:42.420 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.processCommit - Initiating transaction commit
+28-06-2020 02:58:42.420 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCommit - Committing JPA transaction on EntityManager [SessionImpl(1238168625<open>)]
+28-06-2020 02:58:42.420 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.commit - committing
+28-06-2020 02:58:42.587 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCleanupAfterCompletion - Closing JPA EntityManager [SessionImpl(1238168625<open>)] after transaction
+28-06-2020 02:58:42.587 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=CustomerJob]] launched with the following parameters: [{time=1593282520001}]
+28-06-2020 02:58:42.588 [scheduling-1] DEBUG o.s.batch.core.job.AbstractJob.execute - Job execution starting: JobExecution: id=789, version=0, startTime=null, endTime=null, lastUpdated=Sun Jun 28 02:58:42 IST 2020, status=STARTING, exitStatus=exitCode=UNKNOWN;exitDescription=, job=[JobInstance: id=789, version=0, Job=[CustomerJob]], jobParameters=[{time=1593282520001}]
+28-06-2020 02:58:42.588 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.getTransaction - Creating new transaction with name [org.springframework.batch.core.repository.support.SimpleJobRepository.update]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+28-06-2020 02:58:42.588 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Opened new EntityManager [SessionImpl(543723965<open>)] for JPA transaction
+28-06-2020 02:58:42.588 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.<init> - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+28-06-2020 02:58:42.588 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.begin - begin
+28-06-2020 02:58:42.588 [scheduling-1] DEBUG o.s.j.d.DriverManagerDataSource.getConnectionFromDriver - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/finflowz?searchpath=finflowz_workflow]
+28-06-2020 02:58:42.617 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@eab84fd]
+28-06-2020 02:58:42.617 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.query - Executing prepared SQL query
+28-06-2020 02:58:42.617 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [SELECT VERSION FROM BATCH_JOB_EXECUTION WHERE JOB_EXECUTION_ID=?]
+28-06-2020 02:58:42.619 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.query - Executing prepared SQL query
+28-06-2020 02:58:42.619 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [SELECT COUNT(*) FROM BATCH_JOB_EXECUTION WHERE JOB_EXECUTION_ID = ?]
+28-06-2020 02:58:42.619 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.update - Executing prepared SQL update
+28-06-2020 02:58:42.620 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [UPDATE BATCH_JOB_EXECUTION set START_TIME = ?, END_TIME = ?,  STATUS = ?, EXIT_CODE = ?, EXIT_MESSAGE = ?, VERSION = ?, CREATE_TIME = ?, LAST_UPDATED = ? where JOB_EXECUTION_ID = ? and VERSION = ?]
+28-06-2020 02:58:42.620 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.processCommit - Initiating transaction commit
+28-06-2020 02:58:42.620 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCommit - Committing JPA transaction on EntityManager [SessionImpl(543723965<open>)]
+28-06-2020 02:58:42.621 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.commit - committing
+28-06-2020 02:58:42.843 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCleanupAfterCompletion - Closing JPA EntityManager [SessionImpl(543723965<open>)] after transaction
+28-06-2020 02:58:42.844 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.getTransaction - Creating new transaction with name [org.springframework.batch.core.repository.support.SimpleJobRepository.getLastStepExecution]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+28-06-2020 02:58:42.844 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Opened new EntityManager [SessionImpl(1895151817<open>)] for JPA transaction
+28-06-2020 02:58:42.844 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.<init> - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+28-06-2020 02:58:42.844 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.begin - begin
+28-06-2020 02:58:42.844 [scheduling-1] DEBUG o.s.j.d.DriverManagerDataSource.getConnectionFromDriver - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/finflowz?searchpath=finflowz_workflow]
+28-06-2020 02:58:42.874 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@14743a13]
+28-06-2020 02:58:42.874 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.query - Executing prepared SQL query
+28-06-2020 02:58:42.875 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [SELECT JOB_EXECUTION_ID, START_TIME, END_TIME, STATUS, EXIT_CODE, EXIT_MESSAGE, CREATE_TIME, LAST_UPDATED, VERSION, JOB_CONFIGURATION_LOCATION from BATCH_JOB_EXECUTION where JOB_INSTANCE_ID = ? order by JOB_EXECUTION_ID desc]
+28-06-2020 02:58:42.877 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.query - Executing prepared SQL query
+28-06-2020 02:58:42.878 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [SELECT JOB_EXECUTION_ID, KEY_NAME, TYPE_CD, STRING_VAL, DATE_VAL, LONG_VAL, DOUBLE_VAL, IDENTIFYING from BATCH_JOB_EXECUTION_PARAMS where JOB_EXECUTION_ID = ?]
+28-06-2020 02:58:42.879 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.query - Executing prepared SQL query
+28-06-2020 02:58:42.879 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [SELECT STEP_EXECUTION_ID, STEP_NAME, START_TIME, END_TIME, STATUS, COMMIT_COUNT, READ_COUNT, FILTER_COUNT, WRITE_COUNT, EXIT_CODE, EXIT_MESSAGE, READ_SKIP_COUNT, WRITE_SKIP_COUNT, PROCESS_SKIP_COUNT, ROLLBACK_COUNT, LAST_UPDATED, VERSION from BATCH_STEP_EXECUTION where JOB_EXECUTION_ID = ? order by STEP_EXECUTION_ID]
+28-06-2020 02:58:42.881 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.processCommit - Initiating transaction commit
+28-06-2020 02:58:42.881 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCommit - Committing JPA transaction on EntityManager [SessionImpl(1895151817<open>)]
+28-06-2020 02:58:42.881 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.commit - committing
+28-06-2020 02:58:42.882 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCleanupAfterCompletion - Closing JPA EntityManager [SessionImpl(1895151817<open>)] after transaction
+28-06-2020 02:58:42.882 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.getTransaction - Creating new transaction with name [org.springframework.batch.core.repository.support.SimpleJobRepository.getStepExecutionCount]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+28-06-2020 02:58:42.883 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Opened new EntityManager [SessionImpl(577561544<open>)] for JPA transaction
+28-06-2020 02:58:42.883 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.<init> - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+28-06-2020 02:58:42.883 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.begin - begin
+28-06-2020 02:58:42.883 [scheduling-1] DEBUG o.s.j.d.DriverManagerDataSource.getConnectionFromDriver - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/finflowz?searchpath=finflowz_workflow]
+28-06-2020 02:58:42.927 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@7f0234bc]
+28-06-2020 02:58:42.927 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.query - Executing prepared SQL query
+28-06-2020 02:58:42.928 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [SELECT JOB_EXECUTION_ID, START_TIME, END_TIME, STATUS, EXIT_CODE, EXIT_MESSAGE, CREATE_TIME, LAST_UPDATED, VERSION, JOB_CONFIGURATION_LOCATION from BATCH_JOB_EXECUTION where JOB_INSTANCE_ID = ? order by JOB_EXECUTION_ID desc]
+28-06-2020 02:58:42.930 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.query - Executing prepared SQL query
+28-06-2020 02:58:42.931 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [SELECT JOB_EXECUTION_ID, KEY_NAME, TYPE_CD, STRING_VAL, DATE_VAL, LONG_VAL, DOUBLE_VAL, IDENTIFYING from BATCH_JOB_EXECUTION_PARAMS where JOB_EXECUTION_ID = ?]
+28-06-2020 02:58:42.932 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.query - Executing prepared SQL query
+28-06-2020 02:58:42.932 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [SELECT STEP_EXECUTION_ID, STEP_NAME, START_TIME, END_TIME, STATUS, COMMIT_COUNT, READ_COUNT, FILTER_COUNT, WRITE_COUNT, EXIT_CODE, EXIT_MESSAGE, READ_SKIP_COUNT, WRITE_SKIP_COUNT, PROCESS_SKIP_COUNT, ROLLBACK_COUNT, LAST_UPDATED, VERSION from BATCH_STEP_EXECUTION where JOB_EXECUTION_ID = ? order by STEP_EXECUTION_ID]
+28-06-2020 02:58:42.934 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.processCommit - Initiating transaction commit
+28-06-2020 02:58:42.934 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCommit - Committing JPA transaction on EntityManager [SessionImpl(577561544<open>)]
+28-06-2020 02:58:42.934 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.commit - committing
+28-06-2020 02:58:42.934 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCleanupAfterCompletion - Closing JPA EntityManager [SessionImpl(577561544<open>)] after transaction
+28-06-2020 02:58:42.935 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.getTransaction - Creating new transaction with name [org.springframework.batch.core.repository.support.SimpleJobRepository.add]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+28-06-2020 02:58:42.935 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Opened new EntityManager [SessionImpl(526269485<open>)] for JPA transaction
+28-06-2020 02:58:42.935 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.<init> - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+28-06-2020 02:58:42.935 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.begin - begin
+28-06-2020 02:58:42.935 [scheduling-1] DEBUG o.s.j.d.DriverManagerDataSource.getConnectionFromDriver - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/finflowz?searchpath=finflowz_workflow]
+28-06-2020 02:58:42.967 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@71174cae]
+28-06-2020 02:58:42.968 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.update - Executing prepared SQL update
+28-06-2020 02:58:42.969 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [INSERT into BATCH_STEP_EXECUTION(STEP_EXECUTION_ID, VERSION, STEP_NAME, JOB_EXECUTION_ID, START_TIME, END_TIME, STATUS, COMMIT_COUNT, READ_COUNT, FILTER_COUNT, WRITE_COUNT, EXIT_CODE, EXIT_MESSAGE, READ_SKIP_COUNT, WRITE_SKIP_COUNT, PROCESS_SKIP_COUNT, ROLLBACK_COUNT, LAST_UPDATED) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+28-06-2020 02:58:42.971 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.update - Executing prepared SQL update
+28-06-2020 02:58:42.971 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [INSERT INTO BATCH_STEP_EXECUTION_CONTEXT (SHORT_CONTEXT, SERIALIZED_CONTEXT, STEP_EXECUTION_ID) VALUES(?, ?, ?)]
+28-06-2020 02:58:42.972 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.processCommit - Initiating transaction commit
+28-06-2020 02:58:42.973 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCommit - Committing JPA transaction on EntityManager [SessionImpl(526269485<open>)]
+28-06-2020 02:58:42.973 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.commit - committing
+28-06-2020 02:58:43.007 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCleanupAfterCompletion - Closing JPA EntityManager [SessionImpl(526269485<open>)] after transaction
+28-06-2020 02:58:43.007 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [Customerstep]
+28-06-2020 02:58:43.007 [scheduling-1] DEBUG o.s.batch.core.step.AbstractStep.execute - Executing: id=789
+28-06-2020 02:58:43.007 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.getTransaction - Creating new transaction with name [org.springframework.batch.core.repository.support.SimpleJobRepository.update]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+28-06-2020 02:58:43.007 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Opened new EntityManager [SessionImpl(930383942<open>)] for JPA transaction
+28-06-2020 02:58:43.008 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.<init> - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+28-06-2020 02:58:43.008 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.begin - begin
+28-06-2020 02:58:43.008 [scheduling-1] DEBUG o.s.j.d.DriverManagerDataSource.getConnectionFromDriver - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/finflowz?searchpath=finflowz_workflow]
+28-06-2020 02:58:43.048 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@592565d1]
+28-06-2020 02:58:43.048 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.update - Executing prepared SQL update
+28-06-2020 02:58:43.048 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [UPDATE BATCH_STEP_EXECUTION set START_TIME = ?, END_TIME = ?, STATUS = ?, COMMIT_COUNT = ?, READ_COUNT = ?, FILTER_COUNT = ?, WRITE_COUNT = ?, EXIT_CODE = ?, EXIT_MESSAGE = ?, VERSION = ?, READ_SKIP_COUNT = ?, PROCESS_SKIP_COUNT = ?, WRITE_SKIP_COUNT = ?, ROLLBACK_COUNT = ?, LAST_UPDATED = ? where STEP_EXECUTION_ID = ? and VERSION = ?]
+28-06-2020 02:58:43.050 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.query - Executing prepared SQL query
+28-06-2020 02:58:43.050 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [SELECT VERSION FROM BATCH_JOB_EXECUTION WHERE JOB_EXECUTION_ID=?]
+28-06-2020 02:58:43.051 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.processCommit - Initiating transaction commit
+28-06-2020 02:58:43.051 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCommit - Committing JPA transaction on EntityManager [SessionImpl(930383942<open>)]
+28-06-2020 02:58:43.051 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.commit - committing
+28-06-2020 02:58:43.473 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCleanupAfterCompletion - Closing JPA EntityManager [SessionImpl(930383942<open>)] after transaction
+28-06-2020 02:58:43.474 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.getTransaction - Creating new transaction with name [org.springframework.batch.core.repository.support.SimpleJobRepository.updateExecutionContext]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+28-06-2020 02:58:43.474 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Opened new EntityManager [SessionImpl(2006452427<open>)] for JPA transaction
+28-06-2020 02:58:43.474 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.<init> - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+28-06-2020 02:58:43.474 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.begin - begin
+28-06-2020 02:58:43.474 [scheduling-1] DEBUG o.s.j.d.DriverManagerDataSource.getConnectionFromDriver - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/finflowz?searchpath=finflowz_workflow]
+28-06-2020 02:58:43.600 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@643d98c6]
+28-06-2020 02:58:43.600 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.update - Executing prepared SQL update
+28-06-2020 02:58:43.600 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [UPDATE BATCH_STEP_EXECUTION_CONTEXT SET SHORT_CONTEXT = ?, SERIALIZED_CONTEXT = ? WHERE STEP_EXECUTION_ID = ?]
+28-06-2020 02:58:43.602 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.processCommit - Initiating transaction commit
+28-06-2020 02:58:43.602 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCommit - Committing JPA transaction on EntityManager [SessionImpl(2006452427<open>)]
+28-06-2020 02:58:43.602 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.commit - committing
+28-06-2020 02:58:43.650 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCleanupAfterCompletion - Closing JPA EntityManager [SessionImpl(2006452427<open>)] after transaction
+28-06-2020 02:58:43.651 [scheduling-1] DEBUG o.s.b.repeat.support.RepeatTemplate.start - Starting repeat context.
+28-06-2020 02:58:43.651 [scheduling-1] DEBUG o.s.b.repeat.support.RepeatTemplate.getNextResult - Repeat operation about to start at count=1
+28-06-2020 02:58:43.651 [scheduling-1] DEBUG o.s.b.c.s.c.StepContextRepeatCallback.doInIteration - Preparing chunk execution for StepContext: org.springframework.batch.core.scope.context.StepContext@6528f7ca
+28-06-2020 02:58:43.651 [scheduling-1] DEBUG o.s.b.c.s.c.StepContextRepeatCallback.doInIteration - Chunk execution starting: queue size=0
+28-06-2020 02:58:43.651 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.getTransaction - Creating new transaction with name [null]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+28-06-2020 02:58:43.651 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Opened new EntityManager [SessionImpl(1388406260<open>)] for JPA transaction
+28-06-2020 02:58:43.651 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.<init> - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+28-06-2020 02:58:43.652 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.begin - begin
+28-06-2020 02:58:43.652 [scheduling-1] DEBUG o.s.j.d.DriverManagerDataSource.getConnectionFromDriver - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/finflowz?searchpath=finflowz_workflow]
+28-06-2020 02:58:43.681 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@5ab22cc2]
+28-06-2020 02:58:43.681 [scheduling-1] DEBUG o.s.b.repeat.support.RepeatTemplate.start - Starting repeat context.
+28-06-2020 02:58:43.681 [scheduling-1] DEBUG o.s.b.repeat.support.RepeatTemplate.getNextResult - Repeat operation about to start at count=1
+28-06-2020 02:58:43.681 [scheduling-1] DEBUG c.p.f.springbatch.batch.Reader.read - Reading the data where databse
+28-06-2020 02:58:43.682 [scheduling-1] DEBUG o.h.q.c.internal.CriteriaQueryImpl.interpret - Rendered criteria query -> select generatedAlias0 from Customer as generatedAlias0 where generatedAlias0.accountStatement=:param0
+28-06-2020 02:58:43.682 [scheduling-1] DEBUG org.hibernate.SQL.logStatement - 
+    select
+        customer0_.account_id as account_1_0_,
+        customer0_.account_statement as account_2_0_,
+        customer0_.balance as balance3_0_,
+        customer0_.name as name4_0_ 
+    from
+        customer customer0_ 
+    where
+        customer0_.account_statement=?
+28-06-2020 02:58:43.684 [scheduling-1] DEBUG o.s.b.repeat.support.RepeatTemplate.isComplete - Repeat is complete according to policy and result value.
+28-06-2020 02:58:43.684 [scheduling-1] DEBUG o.s.b.c.s.item.ChunkOrientedTasklet.execute - Inputs not busy, ended: true
+28-06-2020 02:58:43.684 [scheduling-1] DEBUG o.s.b.core.step.tasklet.TaskletStep.doInTransaction - Applying contribution: [StepContribution: read=0, written=0, filtered=0, readSkips=0, writeSkips=0, processSkips=0, exitStatus=EXECUTING]
+28-06-2020 02:58:43.684 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doGetTransaction - Found thread-bound EntityManager [SessionImpl(1388406260<open>)] for JPA transaction
+28-06-2020 02:58:43.684 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.handleExistingTransaction - Participating in existing transaction
+28-06-2020 02:58:43.684 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.update - Executing prepared SQL update
+28-06-2020 02:58:43.685 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [UPDATE BATCH_STEP_EXECUTION_CONTEXT SET SHORT_CONTEXT = ?, SERIALIZED_CONTEXT = ? WHERE STEP_EXECUTION_ID = ?]
+28-06-2020 02:58:43.686 [scheduling-1] DEBUG o.s.b.core.step.tasklet.TaskletStep.doInTransaction - Saving step execution before commit: StepExecution: id=789, version=1, name=Customerstep, status=STARTED, exitStatus=EXECUTING, readCount=0, filterCount=0, writeCount=0 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=1, rollbackCount=0, exitDescription=
+28-06-2020 02:58:43.686 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doGetTransaction - Found thread-bound EntityManager [SessionImpl(1388406260<open>)] for JPA transaction
+28-06-2020 02:58:43.686 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.handleExistingTransaction - Participating in existing transaction
+28-06-2020 02:58:43.686 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.update - Executing prepared SQL update
+28-06-2020 02:58:43.686 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [UPDATE BATCH_STEP_EXECUTION set START_TIME = ?, END_TIME = ?, STATUS = ?, COMMIT_COUNT = ?, READ_COUNT = ?, FILTER_COUNT = ?, WRITE_COUNT = ?, EXIT_CODE = ?, EXIT_MESSAGE = ?, VERSION = ?, READ_SKIP_COUNT = ?, PROCESS_SKIP_COUNT = ?, WRITE_SKIP_COUNT = ?, ROLLBACK_COUNT = ?, LAST_UPDATED = ? where STEP_EXECUTION_ID = ? and VERSION = ?]
+28-06-2020 02:58:43.687 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.query - Executing prepared SQL query
+28-06-2020 02:58:43.687 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [SELECT VERSION FROM BATCH_JOB_EXECUTION WHERE JOB_EXECUTION_ID=?]
+28-06-2020 02:58:43.688 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.processCommit - Initiating transaction commit
+28-06-2020 02:58:43.688 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCommit - Committing JPA transaction on EntityManager [SessionImpl(1388406260<open>)]
+28-06-2020 02:58:43.688 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.commit - committing
+28-06-2020 02:58:43.751 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCleanupAfterCompletion - Closing JPA EntityManager [SessionImpl(1388406260<open>)] after transaction
+28-06-2020 02:58:43.752 [scheduling-1] DEBUG o.s.b.repeat.support.RepeatTemplate.isComplete - Repeat is complete according to policy and result value.
+28-06-2020 02:58:43.752 [scheduling-1] DEBUG o.s.batch.core.step.AbstractStep.execute - Step execution success: id=789
+28-06-2020 02:58:43.752 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.getTransaction - Creating new transaction with name [org.springframework.batch.core.repository.support.SimpleJobRepository.updateExecutionContext]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+28-06-2020 02:58:43.752 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Opened new EntityManager [SessionImpl(925328629<open>)] for JPA transaction
+28-06-2020 02:58:43.752 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.<init> - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+28-06-2020 02:58:43.752 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.begin - begin
+28-06-2020 02:58:43.752 [scheduling-1] DEBUG o.s.j.d.DriverManagerDataSource.getConnectionFromDriver - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/finflowz?searchpath=finflowz_workflow]
+28-06-2020 02:58:43.778 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@5c1f5783]
+28-06-2020 02:58:43.779 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.update - Executing prepared SQL update
+28-06-2020 02:58:43.779 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [UPDATE BATCH_STEP_EXECUTION_CONTEXT SET SHORT_CONTEXT = ?, SERIALIZED_CONTEXT = ? WHERE STEP_EXECUTION_ID = ?]
+28-06-2020 02:58:43.780 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.processCommit - Initiating transaction commit
+28-06-2020 02:58:43.780 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCommit - Committing JPA transaction on EntityManager [SessionImpl(925328629<open>)]
+28-06-2020 02:58:43.781 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.commit - committing
+28-06-2020 02:58:43.840 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCleanupAfterCompletion - Closing JPA EntityManager [SessionImpl(925328629<open>)] after transaction
+28-06-2020 02:58:43.841 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.getTransaction - Creating new transaction with name [org.springframework.batch.core.repository.support.SimpleJobRepository.update]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+28-06-2020 02:58:43.841 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Opened new EntityManager [SessionImpl(1760018626<open>)] for JPA transaction
+28-06-2020 02:58:43.841 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.<init> - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+28-06-2020 02:58:43.841 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.begin - begin
+28-06-2020 02:58:43.841 [scheduling-1] DEBUG o.s.j.d.DriverManagerDataSource.getConnectionFromDriver - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/finflowz?searchpath=finflowz_workflow]
+28-06-2020 02:58:43.966 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@64eb01e7]
+28-06-2020 02:58:43.966 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.update - Executing prepared SQL update
+28-06-2020 02:58:43.967 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [UPDATE BATCH_STEP_EXECUTION set START_TIME = ?, END_TIME = ?, STATUS = ?, COMMIT_COUNT = ?, READ_COUNT = ?, FILTER_COUNT = ?, WRITE_COUNT = ?, EXIT_CODE = ?, EXIT_MESSAGE = ?, VERSION = ?, READ_SKIP_COUNT = ?, PROCESS_SKIP_COUNT = ?, WRITE_SKIP_COUNT = ?, ROLLBACK_COUNT = ?, LAST_UPDATED = ? where STEP_EXECUTION_ID = ? and VERSION = ?]
+28-06-2020 02:58:43.968 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.query - Executing prepared SQL query
+28-06-2020 02:58:43.968 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [SELECT VERSION FROM BATCH_JOB_EXECUTION WHERE JOB_EXECUTION_ID=?]
+28-06-2020 02:58:43.969 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.processCommit - Initiating transaction commit
+28-06-2020 02:58:43.969 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCommit - Committing JPA transaction on EntityManager [SessionImpl(1760018626<open>)]
+28-06-2020 02:58:43.969 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.commit - committing
+28-06-2020 02:58:44.040 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCleanupAfterCompletion - Closing JPA EntityManager [SessionImpl(1760018626<open>)] after transaction
+28-06-2020 02:58:44.040 [scheduling-1] DEBUG o.s.batch.core.step.AbstractStep.execute - Step execution complete: StepExecution: id=789, version=3, name=Customerstep, status=COMPLETED, exitStatus=COMPLETED, readCount=0, filterCount=0, writeCount=0 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=1, rollbackCount=0
+28-06-2020 02:58:44.040 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.getTransaction - Creating new transaction with name [org.springframework.batch.core.repository.support.SimpleJobRepository.updateExecutionContext]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+28-06-2020 02:58:44.040 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Opened new EntityManager [SessionImpl(838808454<open>)] for JPA transaction
+28-06-2020 02:58:44.041 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.<init> - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+28-06-2020 02:58:44.041 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.begin - begin
+28-06-2020 02:58:44.041 [scheduling-1] DEBUG o.s.j.d.DriverManagerDataSource.getConnectionFromDriver - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/finflowz?searchpath=finflowz_workflow]
+28-06-2020 02:58:44.080 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@674814ab]
+28-06-2020 02:58:44.080 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.update - Executing prepared SQL update
+28-06-2020 02:58:44.080 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [UPDATE BATCH_JOB_EXECUTION_CONTEXT SET SHORT_CONTEXT = ?, SERIALIZED_CONTEXT = ? WHERE JOB_EXECUTION_ID = ?]
+28-06-2020 02:58:44.082 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.processCommit - Initiating transaction commit
+28-06-2020 02:58:44.082 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCommit - Committing JPA transaction on EntityManager [SessionImpl(838808454<open>)]
+28-06-2020 02:58:44.082 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.commit - committing
+28-06-2020 02:58:44.176 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCleanupAfterCompletion - Closing JPA EntityManager [SessionImpl(838808454<open>)] after transaction
+28-06-2020 02:58:44.176 [scheduling-1] DEBUG o.s.batch.core.job.AbstractJob.doExecute - Upgrading JobExecution status: StepExecution: id=789, version=3, name=Customerstep, status=COMPLETED, exitStatus=COMPLETED, readCount=0, filterCount=0, writeCount=0 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=1, rollbackCount=0, exitDescription=
+28-06-2020 02:58:44.176 [scheduling-1] DEBUG o.s.batch.core.job.AbstractJob.execute - Job execution complete: JobExecution: id=789, version=1, startTime=Sun Jun 28 02:58:42 IST 2020, endTime=null, lastUpdated=Sun Jun 28 02:58:42 IST 2020, status=COMPLETED, exitStatus=exitCode=COMPLETED;exitDescription=, job=[JobInstance: id=789, version=0, Job=[CustomerJob]], jobParameters=[{time=1593282520001}]
+28-06-2020 02:58:44.177 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.getTransaction - Creating new transaction with name [org.springframework.batch.core.repository.support.SimpleJobRepository.update]: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+28-06-2020 02:58:44.177 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Opened new EntityManager [SessionImpl(1858501641<open>)] for JPA transaction
+28-06-2020 02:58:44.177 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.<init> - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+28-06-2020 02:58:44.177 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.begin - begin
+28-06-2020 02:58:44.177 [scheduling-1] DEBUG o.s.j.d.DriverManagerDataSource.getConnectionFromDriver - Creating new JDBC DriverManager Connection to [jdbc:postgresql://localhost:5432/finflowz?searchpath=finflowz_workflow]
+28-06-2020 02:58:44.207 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doBegin - Exposing JPA transaction as JDBC [org.springframework.orm.jpa.vendor.HibernateJpaDialect$HibernateConnectionHandle@26ed1154]
+28-06-2020 02:58:44.207 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.query - Executing prepared SQL query
+28-06-2020 02:58:44.207 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [SELECT VERSION FROM BATCH_JOB_EXECUTION WHERE JOB_EXECUTION_ID=?]
+28-06-2020 02:58:44.209 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.query - Executing prepared SQL query
+28-06-2020 02:58:44.209 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [SELECT COUNT(*) FROM BATCH_JOB_EXECUTION WHERE JOB_EXECUTION_ID = ?]
+28-06-2020 02:58:44.210 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.update - Executing prepared SQL update
+28-06-2020 02:58:44.210 [scheduling-1] DEBUG o.s.jdbc.core.JdbcTemplate.execute - Executing prepared SQL statement [UPDATE BATCH_JOB_EXECUTION set START_TIME = ?, END_TIME = ?,  STATUS = ?, EXIT_CODE = ?, EXIT_MESSAGE = ?, VERSION = ?, CREATE_TIME = ?, LAST_UPDATED = ? where JOB_EXECUTION_ID = ? and VERSION = ?]
+28-06-2020 02:58:44.211 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.processCommit - Initiating transaction commit
+28-06-2020 02:58:44.211 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCommit - Committing JPA transaction on EntityManager [SessionImpl(1858501641<open>)]
+28-06-2020 02:58:44.211 [scheduling-1] DEBUG o.h.e.t.internal.TransactionImpl.commit - committing
+28-06-2020 02:58:44.230 [scheduling-1] DEBUG o.s.orm.jpa.JpaTransactionManager.doCleanupAfterCompletion - Closing JPA EntityManager [SessionImpl(1858501641<open>)] after transaction
+28-06-2020 02:58:44.231 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=CustomerJob]] completed with the following parameters: [{time=1593282520001}] and the following status: [COMPLETED]

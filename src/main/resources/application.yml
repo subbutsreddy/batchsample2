@@ -1,0 +1,30 @@
+server:
+  port: 3049
+spring:
+  date: 2020-06-30
+  jmx:
+    default-domain: FinFlowz-Batch
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    default-property-inclusion: NON_NULL
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        temp:
+          use_jdbc_metadata_defaults: false
+    hibernate:
+      ddl-auto: update
+  batch:
+    initialize-schema: always
+  application:
+    name: FinFlowz-Batch
+  banner:
+    location: classpath:banner.txt
+#GLOBAL_PROPERTY_PATH : C:\FinFlowz\Properties\FinFlowz.yml
+PROPERTY_PATH : C:\FinFlowz\Properties\FinFlowz-Batch.yml
+#SESSION_PROPERTY_PATH : C:\FinFlowz\Properties\FinFlowz-security.yml
+
+CRON_JOB_MICROSERVICE_BATCH: '*/10 * * * * ?'
